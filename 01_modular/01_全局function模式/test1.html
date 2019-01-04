@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_全局function模式</title>
+</head>
+<body>
+<script type="text/javascript" src="module1.js"></script>
+<script type="text/javascript" src="module2.js"></script>
+<script type="text/javascript">
+  foo()
+  bar()
+  /*因为都是全局函数，所以很容易出现污染的情况，moudle2.js中的foo函数，将module1.js中的foo函数给覆盖了，造成了污染*/
+</script>
+</body>
+</html>
