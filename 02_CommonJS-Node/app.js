@@ -10,8 +10,9 @@
 let module1 = require('./modules/module1')
 let module2 = require('./modules/module2')
 let module3 = require('./modules/module3')
+let module4=require('./modules/module4')
 
-let uniq = require('uniq')
+// let uniq = require('uniq')
 let fs = require('fs')
 
 //使用模块
@@ -19,9 +20,9 @@ module1.foo()
 module2()
 module3.foo()
 module3.bar()
-
-console.log(uniq([1, 3, 1, 4, 3]))
-
-fs.readFile('app.js', function (error, data) {
-  console.log(data.toString())
-})
+console.log(module4)
+// console.log(uniq([1, 3, 1, 4, 3]))
+//
+// fs.readFile('app.js', function (error, data) {
+//   console.log(data.toString())
+// })

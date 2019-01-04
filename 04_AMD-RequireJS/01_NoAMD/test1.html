@@ -11,4 +11,17 @@
 <script type='text/javascript' src='js/modules/alerter.js'></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
+<script>
+  debugger;
+  var b;
+  console.log(a)
+  console.log(b)
+  function a() {
+    console.log("a")
+  }
+  //说明自执行函数，在变量声明过程中，并不会执行，而是在代码执行阶段，遇到自执行函数，自执行函数才会自动执行
+  (function () {
+    console.log("b")
+  })()
+</script>
 </html>
