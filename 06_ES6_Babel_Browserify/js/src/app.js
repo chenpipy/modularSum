@@ -12,6 +12,5 @@ bar()
 console.log(DATA_ARR);
 fun1()
 fun2()
-
 person.setName('JACK')
 console.log(person.name);
