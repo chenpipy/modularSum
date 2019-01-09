@@ -1,32 +1,13 @@
-(function () {
+//define如果通过路径引用js文件，那么其相对路径并不是当前的js文件，而是引用该文件的html所在的路径
+define(['./js/modules/config.js'],function (config) {
   //配置
-  require.config({
-    //基本路径
-    baseUrl: 'js/',
-    //映射: 模块标识名: 路径
-    paths: {
-      //自定义模块
-      'alerter': 'modules/alerter',
-      'dataService': 'modules/dataService',
-
-      //库模块
-      'jquery': 'libs/jquery-1.10.1',
-      'angular': 'libs/angular'
-      
-    },
-
-    //配置不兼容AMD的模块
-    shim: {
-      angular: {
-        exports: 'angular'
-      }
-
-    }
-  })
+  require.config(config)
+  console.log()
 
   //引入模块使用
-  require(['alerter', 'angular'], function (alerter, angular) {
+  require(['alerter', 'angular','index','text!@template/section1.html'], function (alerter, angular,index,section1) {
     alerter.showMsg()
-    console.log(angular);
+    // console.log(angular);
+    document.getElementById("main").innerHTML=section1
   })
-})()
+})
